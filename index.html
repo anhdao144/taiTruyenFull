@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tải Truyện từ TruyenFull.Vision</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Tải Truyện từ TruyenFull.Vision</h1>
+            <p class="subtitle">Tải truyện và lưu thành file HTML để đọc offline</p>
+        </header>
+
+        <div class="content">
+            <div class="input-section">
+                <h2>Nhập URL truyện từ TruyenFull.Vision</h2>
+                <div class="input-group">
+                    <input type="text" id="storyUrl" placeholder="https://truyenfull.vision/truyen/...">
+                    <button id="fetchBtn">Tải thông tin truyện</button>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Hướng dẫn sử dụng:</strong></p>
+                    <p>1. Sao chép URL truyện từ trang TruyenFull.Vision</p>
+                    <p>2. Dán URL vào ô trên và nhấn "Tải thông tin truyện"</p>
+                    <p>3. Chọn chương muốn tải và nhấn "Tải chương"</p>
+                    <p>4. File HTML sẽ được tải về máy của bạn</p>
+                </div>
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Đang tải thông tin truyện...</p>
+            </div>
+
+            <div class="result-section" id="resultSection">
+                <div class="story-info">
+                    <div class="cover">
+                        <img id="coverImg" src="" alt="Bìa truyện">
+                    </div>
+                    <div class="story-details">
+                        <h2 class="story-title" id="storyTitle">Tên truyện</h2>
+                        <div class="story-meta">
+                            <div class="meta-item"><strong>Tác giả:</strong> <span id="storyAuthor">Đang tải...</span>
+                            </div>
+                            <div class="meta-item"><strong>Thể loại:</strong> <span id="storyCategory">Đang
+                                    tải...</span></div>
+                            <div class="meta-item"><strong>Tình trạng:</strong> <span id="storyStatus">Đang
+                                    tải...</span></div>
+                            <div class="meta-item"><strong>Số chương:</strong> <span id="chapterCount">Đang
+                                    tải...</span></div>
+                        </div>
+                        <p id="storyDescription">Mô tả truyện sẽ hiển thị ở đây...</p>
+                    </div>
+                </div>
+
+                <h3>Danh sách chương</h3>
+                <div class="chapters-list" id="chaptersList">
+                    <!-- Danh sách chương sẽ được thêm vào đây -->
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Trang web này chỉ phục vụ mục đích học tập và nghiên cứu. Vui lòng tôn trọng bản quyền của tác giả.</p>
+            <p>© 2023 - Tải Truyện từ TruyenFull.Vision</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</body>
+
+</html>

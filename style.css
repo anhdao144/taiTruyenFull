@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(to right, #4b6cb7, #182848);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.content {
+    padding: 30px;
+}
+
+.input-section {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px 0 0 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4b6cb7;
+    box-shadow: 0 0 0 3px rgba(75, 108, 183, 0.2);
+}
+
+button {
+    padding: 15px 25px;
+    background: linear-gradient(to right, #4b6cb7, #182848);
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #3a5998, #152642);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-box {
+    background-color: #e9f7fe;
+    border-left: 5px solid #4b6cb7;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.info-box p {
+    margin-bottom: 10px;
+}
+
+.result-section {
+    display: none;
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.story-info {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cover {
+    width: 150px;
+    height: 200px;
+    background-color: #eee;
+    border-radius: 8px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-details {
+    flex: 1;
+}
+
+.story-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #182848;
+}
+
+.story-meta {
+    margin-bottom: 15px;
+}
+
+.meta-item {
+    margin-bottom: 5px;
+}
+
+.chapters-list {
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.chapter-item {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chapter-item:last-child {
+    border-bottom: none;
+}
+
+.chapter-item:hover {
+    background-color: #f5f7fa;
+}
+
+.download-btn {
+    padding: 8px 15px;
+    background: linear-gradient(to right, #4b6cb7, #182848);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.download-btn:hover {
+    background: linear-gradient(to right, #3a5998, #152642);
+}
+
+.loading {
+    display: none;
+    text-align: center;
+    padding: 30px;
+}
+
+.spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #4b6cb7;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+    .story-info {
+        flex-direction: column;
+    }
+
+    .cover {
+        width: 100%;
+        height: 250px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    input {
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        border-radius: 8px;
+    }
+}
