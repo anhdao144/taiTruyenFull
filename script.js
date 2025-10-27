@@ -530,7 +530,7 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             const proxyUrl = 'https://api.codetabs.com/v1/proxy?quest=';
             const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 giây timeout
+            const timeoutId = setTimeout(() => controller.abort(), 3000); // 3 giây timeout
             
             const response = await fetch(proxyUrl + encodeURIComponent(chapter.url), {
                 signal: controller.signal
@@ -716,3 +716,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Thêm URL mẫu để dễ dàng thử nghiệm
     storyUrlInput.value = 'https://truyenfull.vision/toi-dua-vao-he-thong-an-dua-nang-do-nua-cai-gioi-giai-tri/';
 });
+
